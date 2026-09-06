@@ -1,0 +1,40 @@
+{
+  "urun": {
+    "urunId": 101,
+    "urunAdi": "Klavye",
+    "kategori": "Elektronik",
+    "fiyat": 350.00,
+    "stokMiktari": 120
+  },
+
+  "musteri": {
+    "musteriId": 1,
+    "ad": "Ahmet",
+    "soyad": "Yılmaz",
+    "email": "ahmet.yilmaz@example.com",
+    "telefon": "05551112233",
+    "sehir": "Kayseri"
+  },
+
+  "siparis": {
+    "siparisId": 501,
+    "musteriId": 1,
+    "siparisTarihi": "2026-08-14T10:30:00",
+    "urunler": [
+      {
+        "urunId": 101,
+        "urunAdi": "Klavye",
+        "adet": 2,
+        "birimFiyat": 350.00
+      },
+      {
+        "urunId": 103,
+        "urunAdi": "Monitör",
+        "adet": 1,
+        "birimFiyat": 2500.00
+      }
+    ],
+    "toplamTutar": 3200.00,
+    "durum": "Onaylandı"
+  }
+}

@@ -1,0 +1,61 @@
+### =========================================================
+### Örnek API İstekleri
+### Staj Günü 4: REST API, HTTP Metodları
+### Bu dosya REST Client (VS Code eklentisi) formatındadır.
+### =========================================================
+
+### 1) GET - Tüm ürünleri listele
+GET https://api.ornekfirma.com/v1/products
+Content-Type: application/json
+
+
+### 2) GET - Tek bir ürünü ID'ye göre görüntüle
+GET https://api.ornekfirma.com/v1/products/101
+Content-Type: application/json
+
+
+### 3) GET - Belirli bir müşteriye ait siparişleri listele
+GET https://api.ornekfirma.com/v1/customers/1/orders
+Content-Type: application/json
+
+
+### 4) POST - Yeni bir müşteri kaydı oluştur
+POST https://api.ornekfirma.com/v1/customers
+Content-Type: application/json
+
+{
+  "ad": "Elif",
+  "soyad": "Kaya",
+  "email": "elif.kaya@example.com",
+  "telefon": "05552223344",
+  "sehir": "Ankara"
+}
+
+
+### 5) POST - Yeni bir sipariş oluştur
+POST https://api.ornekfirma.com/v1/orders
+Content-Type: application/json
+
+{
+  "musteriId": 1,
+  "urunler": [
+    { "urunId": 101, "adet": 2 },
+    { "urunId": 103, "adet": 1 }
+  ]
+}
+
+
+### 6) PUT - Var olan bir ürünün bilgilerini güncelle
+PUT https://api.ornekfirma.com/v1/products/101
+Content-Type: application/json
+
+{
+  "urunAdi": "Kablosuz Klavye",
+  "fiyat": 420.00,
+  "stokMiktari": 95
+}
+
+
+### 7) DELETE - Bir siparişi sil
+DELETE https://api.ornekfirma.com/v1/orders/501
+Content-Type: application/json
